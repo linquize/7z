@@ -615,6 +615,7 @@ STDMETHODIMP CHandler::Open(IInStream *stream,
     if (!_items.IsEmpty() && _items[0].Name == "debian-binary")
     {
       _type = kType_Deb;
+      /*
       _items.DeleteFrontal(1);
       for (unsigned i = 0; i < _items.Size(); i++)
         if (_items[i].Name.IsPrefixedBy("data.tar."))
@@ -625,6 +626,7 @@ STDMETHODIMP CHandler::Open(IInStream *stream,
             _mainSubfile = -1;
             break;
           }
+      */
     }
     else
     {
